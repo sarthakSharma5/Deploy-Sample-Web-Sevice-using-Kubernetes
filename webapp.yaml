@@ -29,9 +29,9 @@ spec:
       name: webpod
       labels:   
         app: webapp
-      spec:
-        containers:
-          - name: webapp-con
-            image: httpd
-            ports:
-              -  containerPort: 80
+    spec:
+      containers:
+      - name: webapp-con
+        image: httpd
+        ports:
+          -  containerPort: 80
