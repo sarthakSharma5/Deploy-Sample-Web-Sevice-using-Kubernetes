@@ -20,17 +20,18 @@ metadata:
   labels:
     app: webapp
 spec:
+  replicas: 3
   selector:
     matchLabels:
       app: webapp
-    template:
-      metadata:
-        name: webpod
-        labels:   
-          app: webapp
-        spec:
-          containers:
-            - name: httpcont
-              image: httpd
-              ports:
-                -  containerPort: 80
+  template:
+    metadata:
+      name: webpod
+      labels:   
+        app: webapp
+      spec:
+        containers:
+          - name: webapp-con
+            image: httpd
+            ports:
+              -  containerPort: 80
