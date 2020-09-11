@@ -31,6 +31,6 @@ spec:
     spec:
       containers:
       - name: webapp-con
-        image: httpd
+        image: sarthaksharma5/webapp:latest
         ports:
           -  containerPort: 80
